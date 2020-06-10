@@ -57,7 +57,7 @@ export default class App extends Component {
 
 
     //Dynamic Chart
-    const socket = io.connect(`http://:${process.env.PORT || 5000}/`);
+    const socket = io.connect(`https://:${process.env.PORT || 5000}/`);
    chart.addCandlestickSeries();
     
     socket.on('chartSocket',(pl)=>{
