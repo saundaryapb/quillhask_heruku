@@ -61,7 +61,7 @@ export default class App extends Component {
    chart.addCandlestickSeries();
     
     socket.on('chartSocket',(pl)=>{
-      // console.log(pl)
+      console.log(pl)
       candleSeries.update(pl);
     })
   };
