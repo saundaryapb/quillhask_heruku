@@ -3,7 +3,7 @@ const api = require('binance');
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 443;
 
 app.use(express.static(path.join(__dirname, 'react_app/build')));
 
