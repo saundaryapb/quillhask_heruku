@@ -56,7 +56,7 @@ export default class App extends Component {
       });
 
 
-    //Dynamic Chart
+    //Dynamic Charts
     const socket = io.connect(`https://quillhash-task.herokuapp.com:${process.env.PORT || 5000}/`);
    chart.addCandlestickSeries();
     
