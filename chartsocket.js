@@ -1,8 +1,16 @@
 const log = console.log;
 const api = require('binance');
 const express = require('express');
+const path = require('path');
 const app = express();
-const server = app.listen('4000',() => log(`Dyanamic Chart Data Server started on port 4000`));
+const port = process.env.PORT || 5000;
+
+app.use(express.static(path.join(__dirname, 'react_app/build')));
+
+// const server = app.listen('4000',() => log(`Dyanamic Chart Data Server started on port 4000`));
+const server = app.listen(port);
+console.log('App is listening on port ' + port);
+
 const socket = require('socket.io');
 const io = socket(server);
 
