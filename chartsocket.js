@@ -8,7 +8,7 @@ const port = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, 'react_app/build')));
 
 // const server = app.listen('4000',() => log(`Dyanamic Chart Data Server started on port 4000`));
-const server = app.listen(port);
+const server = app.listen(port,"0.0.0.0");
 console.log('App is listening on port ' + port);
 
 const socket = require('socket.io');
